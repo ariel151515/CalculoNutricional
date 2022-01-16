@@ -20,19 +20,22 @@ class CalculoNutricional {
     
     
     tmb() { // Calcula tu taza metabolica basal, consumo minimo calorico
-      return this.peso * 22 * this.actividad
+      let tmb =  this.peso * 22 * this.actividad
+      return `Tu TMB es de ${Math.floor(tmb)} Kcal`
     }
     
     superHabitCalorico() { // Aumento de calorias
       let tmb = this.peso * 22 * this.actividad;
       let sumaDeCalorias =  tmb * this.porcentaje / 100;
-      return tmb + sumaDeCalorias;
+      let res =  tmb + sumaDeCalorias;
+      return `Tu consumo calorico debe ser ${Math.floor(res)} Kcal`
     }
     
     deficitCalorico() { // Disminuye calorias
       let tmb = this.peso * 22 * this.actividad;
       let sumaDeCalorias =  tmb * this.porcentaje / 100;
-      return  tmb - sumaDeCalorias;
+      let res =  tmb - sumaDeCalorias;
+      return `Tu consumo calorico debe ser ${Math.floor(res)} Kcal`
     }
     
     // Recibe porcentaje y devuelve cantidad en gramos de nutrientes
