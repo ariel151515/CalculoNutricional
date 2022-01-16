@@ -67,10 +67,11 @@ class CalculoNutricional {
   }
   
   // nombre, edad, peso, factorDeActividad, porcentaje de calorias que queres aumentar o disminuir
-  const ariel = new CalculoNutricional('nombre', 33, 66, 1.6, 20) 
+  const ariel = new CalculoNutricional('Ariel', 33, 66, 1.6, 20) 
   ariel
   ariel.tmb()
   ariel.superHabitCalorico()
   ariel.deficitCalorico()
   ariel.nutricionEnPorcentajes(1626,25,35,40) // calorias,porcentajePro,porcentajeGras,porcentajeCar
+
 
