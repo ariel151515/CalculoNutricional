@@ -28,14 +28,14 @@ class CalculoNutricional {
       let tmb = this.peso * 22 * this.actividad;
       let sumaDeCalorias =  tmb * this.porcentaje / 100;
       let res =  tmb + sumaDeCalorias;
-      return `Tu consumo calorico debe ser ${Math.floor(res)} Kcal`
+      return `Tu consumo calorico debe ser ${Math.floor(res)} Kcal / Suma ${Math.floor(sumaDeCalorias)} Kcal)`
     }
     
     deficitCalorico() { // Disminuye calorias
       let tmb = this.peso * 22 * this.actividad;
       let sumaDeCalorias =  tmb * this.porcentaje / 100;
       let res =  tmb - sumaDeCalorias;
-      return `Tu consumo calorico debe ser ${Math.floor(res)} Kcal`
+      return `Tu consumo calorico debe ser ${Math.floor(res)} Kcal / Resta ${Math.floor(sumaDeCalorias)} Kcal)`
     }
     
     // Recibe porcentaje y devuelve cantidad en gramos de nutrientes
@@ -67,9 +67,10 @@ class CalculoNutricional {
   }
   
   // nombre, edad, peso, factorDeActividad, porcentaje de calorias que queres aumentar o disminuir
-  const ariel = new CalculoNutricional('nombre', 33, 66, 1.6, 30) 
+  const ariel = new CalculoNutricional('nombre', 33, 66, 1.6, 20) 
   ariel
   ariel.tmb()
   ariel.superHabitCalorico()
   ariel.deficitCalorico()
   ariel.nutricionEnPorcentajes(1626,25,35,40) // calorias,porcentajePro,porcentajeGras,porcentajeCar
+
